@@ -1,0 +1,108 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+
+
+// Options
+$enable-rounded: false;
+
+
+
+// Body
+$body-bg: transparent;
+
+
+
+// Links
+$link-color: theme-color("secondary");
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: none;
+
+
+
+// Grid columns
+$grid-columns: 24;
+$grid-gutter-width: 30px;
+
+
+
+// Fonts
+$font-family-sans-serif: "Open Sans", Arial, sans-serif;
+$font-family-monospace: "Courier New", monospace;
+$font-family-base: $font-family-sans-serif;
+
+$font-size-base: 0.88rem; // ~14px
+$font-size-lg: 1.2rem; // 24px
+$font-size-sm: 0.75rem; // 13px
+
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+
+
+
+// Navbar
+/*$navbar-padding-y:                  $spacer / 2;
+$navbar-padding-x:                  $spacer;*/
+
+$navbar-brand-font-size:            $font-size-base;
+$nav-link-height:                   $navbar-brand-font-size * $line-height-base;
+$navbar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2);
+$navbar-brand-padding-y:            ($navbar-brand-height - $nav-link-height) / 2;
+
+
+
+// Tables
+$table-cell-padding: .75rem;
+$table-cell-padding-sm: .3rem;
+
+$table-bg: transparent;
+$table-accent-bg: rgba($black,.05);
+$table-hover-bg: rgba($black,.075);
+$table-active-bg: $table-hover-bg;
+
+$table-border-width: $border-width;
+$table-border-color: $gray-200;
+
+$table-head-bg: $gray-200;
+$table-head-color: $gray-700;
+
+$table-inverse-bg: $gray-900;
+$table-inverse-accent-bg: rgba($white, .05);
+$table-inverse-hover-bg: rgba($white, .075);
+$table-inverse-border-color: lighten($gray-900, 7.5%);
+$table-inverse-color: $body-bg;
+
+
+
+// List group
+$list-group-bg: $white;
+$list-group-border-color: rgba($black,.05);
+
+$list-group-item-padding-y: 10px;
+$list-group-item-padding-x: 20px;
+
+$list-group-hover-bg: $gray-100;
+$list-group-active-color: $component-active-color;
+$list-group-active-bg: $component-active-bg;
+$list-group-active-border-color: $list-group-active-bg;
+
+$list-group-disabled-color: $gray-600;
+$list-group-disabled-bg: $list-group-bg;
+
+$list-group-action-color: $gray-700;
+$list-group-action-hover-color: $list-group-action-color;
+
+$list-group-action-active-color: $body-color;
+$list-group-action-active-bg: $gray-200;
+
+
+
+// Font Awesome
+$fa-font-size-base: $font-size-base;
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts";
+$fa-css-prefix: icon;

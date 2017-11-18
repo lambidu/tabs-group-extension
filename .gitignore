@@ -1,0 +1,32 @@
+# Visual Studio cache/options directory
+.vs/
+
+# User-specific files
+*.suo
+*.user
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+x64/
+x86/
+bld/
+
+# Package managers
+node_modules/
+bower_components/
+package-lock.json
+
+# Webpack
+.awcache/
+dist/
+stats.json
+
+# Custom
+build/
+*.njsproj

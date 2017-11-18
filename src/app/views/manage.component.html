@@ -1,0 +1,60 @@
+<div class="d-flex flex-row h-100">
+	<div class="d-flex flex-column bg-light h-100" style="width: 320px;">
+		<div class="list-group mb-auto" [dragula]="'group'" [dragulaModel]="model">
+			<button type="button" class="list-group-item list-group-item-action" *ngFor="let group of model" (click)="onGroupClick(group)" [ngClass]="{ 'active' : group === current }">
+				<span class="name">
+					{{ group.name }}
+
+					<small class="float-right">
+						{{ group.tabs.length }} tabs
+					</small>
+				</span>
+			</button>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-block align-self-end" (click)="onCreateGroup()">
+			New Group
+		</button>
+	</div>
+
+	<div class="w-100 h-100" *ngIf="current">
+		<div class="p-3">
+			<div class="input-group">
+				<input type="text" class="form-control" [(ngModel)]="current.name" (input)="save()" />
+
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-primary" (click)="onChangeGroup()" [disabled]="current.active">Open Group</button>
+					<button type="button" class="btn btn-danger" (click)="onRemoveGroup()" [disabled]="model.length == 1">&#10006;</button>
+				</span>
+			</div>
+		</div>
+
+		<div class="d-flex flex-column tabs-list" *ngIf="current.tabs.length > 0">
+			<div class="d-flex flex-row flex-nowrap w-100 bg-light tabs-list-tab">
+				<div class="text-muted p-2 mr-auto"><small>Title</small></div>
+				<div class="text-muted p-2 mr-3"><small>Last Access</small></div>
+				<div class="text-muted p-2"></div>
+			</div>
+
+			<div class="d-flex flex-row flex-nowrap w-100 tabs-list-tab" *ngFor="let tab of current.tabs">
+				<div class="p-2 mr-auto">
+					<a [href]="tab.url | safe" target="_blank">
+						<img class="mr-2" [src]="(tab.favIconUrl || 'assets/icons/icon-favicon.svg') | safe" style="width: 16px; height: 16px;" /> {{ tab.title }}
+					</a>
+				</div>
+
+				<div class="p-2">
+					<span class="text-muted ">{{ tab.lastAccessed | date }}</span>
+				</div>
+
+				<div class="p-2">
+					<button type="button" class="btn btn-link p-0" (click)="onRemoveTab(tab)">&#10006;</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="alert alert-light" *ngIf="current.tabs.length === 0">
+			This group does not contains tabs yet
+		</div>
+	</div>
+</div>

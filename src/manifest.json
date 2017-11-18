@@ -1,0 +1,76 @@
+{
+	"manifest_version": 2,
+
+	"version": "1.0.0",
+	"name": "Tabs Group Extension",
+	"short_name": "Tabs Group",
+	"description": "Extension that allows you to group your tabs.",
+	"author": "lambidu",
+	"homepage_url": "https://github.com/lambidu/tabs-group-extension",
+
+	"icons": {
+		"16": "assets/logo/dark-16.png",
+		"32": "assets/logo/dark-32.png",
+		"48": "assets/logo/dark-48.png",
+		"96": "assets/logo/dark-96.png",
+		"128": "assets/logo/dark-128.png"
+	},
+
+	"permissions": [
+		"tabs",
+		"storage"
+	],
+
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+
+	"background": {
+		"page": "index.html?page=background"
+	},
+
+	"options_ui": {
+		"page": "index.html?page=settings",
+		"open_in_tab": true
+	},
+
+	"browser_action": {
+		"default_title": "Tabs Group Extension",
+		"default_popup": "index.html?page=popup",
+
+		"browser_style": true,
+
+		"default_icon": "assets/logo/dark-32.png",
+
+		"theme_icons": [
+			{
+				"light": "assets/logo/light-16.png",
+				"dark": "assets/logo/dark-16.png",
+				"size": 16
+			},
+			{
+				"light": "assets/logo/light-24.png",
+				"dark": "assets/logo/dark-24.png",
+				"size": 24
+			},
+			{
+				"light": "assets/logo/light-32.png",
+				"dark": "assets/logo/dark-32.png",
+				"size": 32
+			},
+			{
+				"light": "assets/logo/light-48.png",
+				"dark": "assets/logo/dark-48.png",
+				"size": 48
+			},
+			{
+				"light": "assets/logo/light-96.png",
+				"dark": "assets/logo/dark-96.png",
+				"size": 96
+			},
+			{
+				"light": "assets/logo/light-128.png",
+				"dark": "assets/logo/dark-128.png",
+				"size": 128
+			}
+		]
+	}
+}
