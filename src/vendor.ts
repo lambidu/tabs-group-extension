@@ -5,6 +5,3 @@ import '@angular/core';
 import '@angular/common';
 import '@angular/forms';
 import '@angular/router';
-
-// Theming
-import './themes/default/theme.scss';
