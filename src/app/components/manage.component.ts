@@ -45,6 +45,7 @@ export class ManageComponent implements OnInit {
 	 */
 	private onGroupClick(group): void {
 		this.current = group;
+		this.detector.detectChanges();
 	}
 
 
