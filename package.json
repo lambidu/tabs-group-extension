@@ -66,4 +66,6 @@
 		"start:firefox": "web-ext run --source-dir ./extension-dist/"
 	},
 	"version": "1.0.0"
+		"build": "npm run build:firefox",
+		"build:firefox": "web-ext build --source-dir ./dist --artifacts-dir ./build --overwrite-dest"
 }
