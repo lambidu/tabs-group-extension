@@ -1,35 +1,37 @@
 {
+	"name": "tabs-group-extension",
+	"description": "Extension that allows you to group your tabs.",
+	"version": "1.0.0",
+	"license": "MIT",
 	"author": {
 		"name": "lambidu",
 		"email": "contact@lambidu.com",
 		"url": "https://lambidu.com"
 	},
-	"dependencies": {
-		"@angular/animations": "^5.0.1",
-		"@angular/common": "^5.0.1",
-		"@angular/compiler": "^5.0.1",
-		"@angular/core": "^5.0.1",
-		"@angular/forms": "^5.0.1",
-		"@angular/http": "^5.0.1",
-		"@angular/platform-browser": "^5.0.1",
-		"@angular/platform-browser-dynamic": "^5.0.1",
-		"@angular/router": "^5.0.1",
-		"bootstrap": "next",
-		"core-js": "^2.4.1",
-		"font-awesome": "latest",
-		"hammerjs": "^2.0.8",
-		"jquery": "^3.0.0",
-		"ng2-dragula": "^1.5.0",
-		"popper.js": "^1.0.0",
-		"reflect-metadata": "^0.1.10",
-		"rxjs": "^5.1.0",
-		"webextension-polyfill": "^0.2.1",
-		"zone.js": "^0.8.4"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lambidu/tabs-group-extension"
 	},
-	"description": "Extension that allows you to group your tabs.",
+	"main": "dist/main.js",
+	"dependencies": {
+		"@angular/common": "^5.0.0",
+		"@angular/compiler": "^5.0.0",
+		"@angular/core": "^5.0.0",
+		"@angular/forms": "^5.0.0",
+		"@angular/http": "^5.0.0",
+		"@angular/platform-browser": "^5.0.0",
+		"@angular/platform-browser-dynamic": "^5.0.0",
+		"@angular/router": "^5.0.0",
+		"core-js": "^2.4.1",
+		"rxjs": "^5.1.0",
+		"zone.js": "^0.8.4",
+		"bootstrap": "^4.0.0-beta.2",
+		"ng2-dragula": "^1.5.0",
+		"webextension-polyfill": "^0.2.1"
+	},
 	"devDependencies": {
-		"@types/node": "^8.0.51",
-		"@types/webpack": "^3.8.1",
+		"@types/node": "latest",
+		"@types/webpack": "latest",
 		"angular2-template-loader": "latest",
 		"awesome-typescript-loader": "latest",
 		"copy-webpack-plugin": "latest",
@@ -40,11 +42,11 @@
 		"html-webpack-plugin": "latest",
 		"inline-manifest-webpack-plugin": "latest",
 		"ng-router-loader": "latest",
-		"node-sass": "^4.6.0",
+		"node-sass": "latest",
 		"optimize-js-plugin": "latest",
 		"raw-loader": "latest",
 		"sass-loader": "latest",
-		"script-ext-html-webpack-plugin": "^1.8.8",
+		"script-ext-html-webpack-plugin": "latest",
 		"source-map-loader": "latest",
 		"style-loader": "latest",
 		"typescript": "latest",
@@ -54,18 +56,10 @@
 		"webpack-dev-server": "latest",
 		"webpack-merge": "latest"
 	},
-	"license": "MIT",
-	"main": "dist/main.js",
-	"name": "tabs-group-extension",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/lambidu/tabs-group-extension"
-	},
 	"scripts": {
 		"start": "npm run start:firefox",
-		"start:firefox": "web-ext run --source-dir ./extension-dist/"
-	},
-	"version": "1.0.0"
+		"start:firefox": "web-ext run --source-dir ./dist/",
 		"build": "npm run build:firefox",
 		"build:firefox": "web-ext build --source-dir ./dist --artifacts-dir ./build --overwrite-dest"
+	}
 }
