@@ -2,41 +2,25 @@
 	"compileOnSave": false,
 
 	"compilerOptions": {
+		"baseUrl": "./",
+		"outDir": "./dist/out-tsc",
+
 		"target": "es5",
-		"module": "commonjs",
+		"module": "es2015",
 		"moduleResolution": "node",
+		"sourceMap": false,
+		"declaration": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"allowSyntheticDefaultImports": true,
-		"sourceMap": true,
-		"noEmit": true,
-		"noEmitHelpers": true,
-		"importHelpers": true,
-		"strictNullChecks": false,
 
 		"lib": [
 			"dom",
-			"es6"
+			"es2017"
 		],
 
 		"typeRoots": [
 			"node_modules/@types",
 			"node_modules/web-ext-types"
-		],
-
-		"types": [
-			"node",
-			"webpack"
 		]
-	},
-
-	"exclude": [
-		"node_modules",
-		"dist"
-	],
-
-	"awesomeTypescriptLoaderOptions": {
-		"forkChecker": true,
-		"useWebpackText": true
 	}
 }

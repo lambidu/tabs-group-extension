@@ -9,8 +9,8 @@ import { TabsService } from '../services';
 	templateUrl: '../views/popup.component.html'
 })
 export class PopupComponent implements OnInit {
-	private model: Array<Group> = [];
-	private syncing: boolean = false;
+	public model: Array<Group> = [];
+	public syncing: boolean = false;
 
 
 

@@ -12,8 +12,8 @@ import { Group } from '../models';
 	templateUrl: '../views/manage.component.html'
 })
 export class ManageComponent implements OnInit {
-	private model: Array<Group> = [];
-	private current: Group = null;
+	public model: Array<Group> = [];
+	public current: Group = null;
 
 
 

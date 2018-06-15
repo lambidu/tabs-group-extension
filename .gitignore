@@ -20,7 +20,6 @@ bld/
 # Package managers
 node_modules/
 bower_components/
-package-lock.json
 
 # Webpack
 .awcache/
@@ -28,5 +27,6 @@ dist/
 stats.json
 
 # Custom
-build/
-*.njsproj
+/build/
+/Properties/
+*.csproj
