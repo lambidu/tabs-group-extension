@@ -3,8 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { APP_BASE_HREF } from '@angular/common';
 
-import { DragulaModule } from 'ng2-dragula';
-
 import { AppComponent } from './app.component';
 
 import { COMPONENTS } from './components';
@@ -24,7 +22,6 @@ import { APP_ROUTES } from './app.routes';
 	imports: [
 		BrowserModule,
 		FormsModule,
-		DragulaModule,
 
 		APP_ROUTES
 	],

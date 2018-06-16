@@ -1,8 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import { DragulaService } from 'ng2-dragula';
-
 import { TabsService } from '../services';
 import { Group } from '../models';
 
@@ -17,9 +15,7 @@ export class ManageComponent implements OnInit {
 
 
 
-	public constructor(private tabs: TabsService, private detector: ChangeDetectorRef, private dragula: DragulaService, private sanitizer: DomSanitizer) {
-		// Watch darg'n'drop events
-		this.dragula.dragend.subscribe(($event) => { this.onDragEnd($event); });
+	public constructor(private tabs: TabsService, private detector: ChangeDetectorRef, private sanitizer: DomSanitizer) {
 	}
 
 
@@ -113,12 +109,5 @@ export class ManageComponent implements OnInit {
 				this.current = this.model[0];
 			});
 		}
-	}
-
-
-
-	private onDragEnd(value) {
-		// Save changes
-		this.tabs.saveGroups();
 	}
 }

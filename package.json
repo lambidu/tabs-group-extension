@@ -25,7 +25,6 @@
 		"bootstrap": "^4.1.0",
 		"core-js": "^2.5.4",
 		"jquery": "^3.3.0",
-		"ng2-dragula": "^1.5.0",
 		"popper.js": "^1.14.0",
 		"rxjs": "^6.0.0",
 		"rxjs-compat": "^6.0.0",
