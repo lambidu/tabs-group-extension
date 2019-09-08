@@ -5,22 +5,28 @@
 		"baseUrl": "./",
 		"outDir": "./dist/out-tsc",
 
-		"target": "es5",
-		"module": "es2015",
+		"target": "es2015",
+		"module": "esnext",
 		"moduleResolution": "node",
 		"sourceMap": false,
 		"declaration": false,
-		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"downlevelIteration": true,
+		"importHelpers": true,
 
 		"lib": [
 			"dom",
-			"es2017"
+			"es2018"
 		],
 
 		"typeRoots": [
 			"node_modules/@types",
 			"node_modules/web-ext-types"
 		]
+	},
+
+	"angularCompilerOptions": {
+		"fullTemplateTypeCheck": true,
+		"strictInjectionParameters": true
 	}
 }

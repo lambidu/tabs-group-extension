@@ -12,7 +12,7 @@ export class SafePipe {
 
 
 
-	public transform(value) {
-		return this.sanitizer.bypassSecurityTrustUrl(value);
+	public transform(value): string {
+		return this.sanitizer.bypassSecurityTrustUrl(value).toString();
 	}
 }

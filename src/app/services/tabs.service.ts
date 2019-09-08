@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Observable } from 'rxjs/Observable';
-import { Subscriber } from 'rxjs/Subscriber';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 import { Group } from '../models';
 
