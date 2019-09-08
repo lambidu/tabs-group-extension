@@ -39,7 +39,7 @@ export class ManageComponent implements OnInit {
 	/**
 	 * Changes active group
 	 */
-	private onGroupClick(group): void {
+	public onGroupClick(group): void {
 		this.current = group;
 		this.detector.detectChanges();
 	}
@@ -49,7 +49,7 @@ export class ManageComponent implements OnInit {
 	/**
 	 * Saves changes
 	 */
-	private save(): void {
+	public save(): void {
 		this.tabs.saveGroups();
 		this.detector.detectChanges();
 	}
@@ -60,7 +60,7 @@ export class ManageComponent implements OnInit {
 	 * Removes tab from group
 	 * @param tab
 	 */
-	private onRemoveTab(tab) {
+	public onRemoveTab(tab) {
 		this.tabs.closeTab(this.current, tab);
 	}
 
@@ -82,7 +82,7 @@ export class ManageComponent implements OnInit {
 	/**
 	 * Changes group
 	 */
-	private onChangeGroup() {
+	public onChangeGroup() {
 		// Save active changes
 		this.tabs.changeGroup(this.current);
 	}
@@ -92,7 +92,7 @@ export class ManageComponent implements OnInit {
 	/**
 	 * Removes group
 	 */
-	private onRemoveGroup() {
+	public onRemoveGroup() {
 		let question = [
 			'You are about to remove group "' + this.current.name + '"',
 			'This will also remove ' + this.current.tabs.length + ' tabs in this group!',
