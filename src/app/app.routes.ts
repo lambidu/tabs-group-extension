@@ -1,6 +1,7 @@
-import { Routes, RouterModule, UrlSegment } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 import { GuardService } from "./services";
+
 import {
 	HostComponent,
 	ManageComponent,

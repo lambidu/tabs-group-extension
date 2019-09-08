@@ -35,10 +35,9 @@
 	"browser_action": {
 		"default_title": "Tabs Group Extension",
 		"default_popup": "index.html?page=popup",
+		"default_icon": "assets/logo/dark-32.png",
 
 		"browser_style": true,
-
-		"default_icon": "assets/logo/dark-32.png",
 
 		"theme_icons": [
 			{
