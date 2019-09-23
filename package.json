@@ -1,7 +1,7 @@
 {
 	"name": "tabs-group-extension",
 	"description": "Extension that allows you to group your tabs.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"author": {
 		"name": "lambidu",
@@ -44,7 +44,7 @@
 	"scripts": {
 		"ng": "ng",
 		"start": "npm run start:firefox",
-		"start:firefox": "web-ext run --browser-console --source-dir ./dist",
+		"start:firefox": "web-ext run --source-dir ./dist --as-needed --browser-console --keep-profile-changes",
 		"build": "ng build --prod --progress=false && npm run build:firefox",
 		"build:firefox": "web-ext build --source-dir ./dist --artifacts-dir ./build/firefox --overwrite-dest",
 		"watch": "ng build --watch=true --progress=false --extract-css=true --delete-output-path=false --aot=true"
