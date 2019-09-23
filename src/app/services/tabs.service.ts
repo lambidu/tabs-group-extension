@@ -222,9 +222,6 @@ export class TabsService {
 
 				// Open tabs from selected group
 				group.tabs
-					.sort((a, b) => {
-						return a.index === b.index ? 0 : a.index > b.index ? 1 : -1;
-					})
 					.forEach((groupTab, index) => {
 						browser.tabs.create({
 							index: index,
