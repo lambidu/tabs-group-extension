@@ -38,8 +38,8 @@
 
 			<div class="d-flex flex-row flex-nowrap w-100 tabs-list-tab" *ngFor="let tab of current.tabs">
 				<div class="p-2 mr-auto">
-					<a [href]="tab.url | safe" target="_blank">
-						<img class="mr-2" [src]="(tab.favIconUrl || 'assets/icons/icon-favicon.svg') | safe" style="width: 16px; height: 16px;" /> {{ tab.title }}
+					<a [href]="tab.url | safe:'url'" target="_blank">
+						<img class="mr-2" [src]="(tab.favIconUrl || 'assets/icons/icon-favicon.svg') | safe:'url'" style="width: 16px; height: 16px;" /> {{ tab.title }}
 					</a>
 				</div>
 
